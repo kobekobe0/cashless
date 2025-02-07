@@ -28,6 +28,9 @@ Folder structure
 │   ├── lib
 │   ├── public
 │   ├── api
+│   ├── store
+│   ├── constants
+│   ├── utils
 
 ```
 
@@ -35,13 +38,19 @@ app: contains all pages to be rendered (explore app routing in nextJS for in dep
 
 components: contains all components that can be used in the app
 
-lib: contains all utility functions
+lib: contains all helper functions
 
 hooks: contains all custom hooks
 
 public: contains all static assets
 
 api: contains all api routes
+
+store: contains all api calls
+
+constants: contains all constants
+
+utils: contains all utility functions
 
 
 

@@ -1,4 +1,5 @@
 "use client"
+import { getUsers } from "@/store/dashboard/users/users.repository";
 //sample useQuery usage
 //sample app based routing
 //using "use client" is not ideal but it is required for the tanstack to work, so, every component that uses tanstack should be separated from the rest of the components
@@ -8,14 +9,10 @@
 import { useQuery } from "@tanstack/react-query";
 
 export default function SampleUsers() {
-    const fetchData = async () => {
-        const res = await fetch("https://jsonplaceholder.typicode.com/posts");
-        return res.json();
-    };
-
     const { data, error, isLoading } = useQuery({
         queryKey: ["posts"],
-        queryFn: fetchData,
+        queryFn: () => getUsers(),
+        keepPreviousData: true
     });
     
     if (isLoading) return <p>Loading...</p>;

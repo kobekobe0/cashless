@@ -20,9 +20,9 @@ export default function SampleUsers() {
 
     return (
         <ul className="space-y-2 mt-4">
-            {data.slice(0, 5).map((post) => (
+            {data?.map((post) => (
                 <li key={post.id} className="p-3 bg-gray-100 rounded-lg">
-                    {post.title}
+                    {post.name}
                 </li>
             ))}
         </ul>

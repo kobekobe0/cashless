@@ -53,4 +53,5 @@ constants: contains all constants
 utils: contains all utility functions
 
 
-
+/api/index.js : contains all endpoints
+/store/[page]/[subpage]/[repo] : contains all api calls that will be used in that particular folder

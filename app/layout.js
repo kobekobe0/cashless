@@ -9,7 +9,7 @@ export default function RootLayout({ children }) {
       <body>
         <TanstackProvider>
           <Navbar />
-
+          
           {/* Render the actual page content */}
           {children}
         </TanstackProvider>

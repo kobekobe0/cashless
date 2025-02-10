@@ -5,7 +5,7 @@ import { PrimaryLabel } from "@/components/reusables/typography/Typography";
 
 const Reusables = () => {
   return (
-    <div className="w-full flex flex-col items-center bg-gray-100 py-10">
+    <div className="w-full flex flex-col items-center  py-10">
       <div className="p-6 bg-white shadow-lg rounded-lg w-full max-w-2xl text-center">
         <h2 className="mb-6 font-semibold text-2xl text-gray-800">Reusable Buttons</h2>
         
@@ -22,6 +22,10 @@ const Reusables = () => {
           <AlternativeBtn text="Alternative" />
           <PrimaryBtn disabled={true} text="Disabled" />
         </div>
+      </div>
+
+      <div>
+        other components
       </div>
     </div>
   );

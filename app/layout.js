@@ -13,7 +13,7 @@ export default function RootLayout({ children }) {
               {/* Left Logo */}
               {/* Replace the right logo as needed
                   Icon placeholder is located in public > icons > placeholder.png */}
-              <Image src="/icons/LAR Logo.jpg" alt="Left Icon" width={32} height={32} />
+              <Image src="/icons/LAR Logo.jpg" alt="Left Icon" width={80} height={32} />
 
               {/* Centered Text (Now Multi-Line) */}
               <div className="text-center">
@@ -26,7 +26,7 @@ export default function RootLayout({ children }) {
               {/* Right Logo */}
               {/* Replace the right logo as needed
                   Icon placeholder is located in public > icons > placeholder.png */}
-              <Image src="/icons/LAR Logo.jpg" alt="Right Icon" width={32} height={32} />
+              <Image src="/icons/LAR Logo.jpg" alt="Right Icon" width={80} height={32} />
             </div>
           </div>
 

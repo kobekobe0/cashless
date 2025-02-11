@@ -8,15 +8,16 @@ import { ToastContainer } from "@/components/reusables/validation/toast";
 export default function RootLayout({ children }) {
   return (
     <html>
-      <body>
+      <body className="pt-[80px]">  {/* Adjust the padding to navbar height */}
         <TanstackProvider>
           <ToastContainer position="bottom-right"/>
-
+          
           <Navbar />
           {children}
-
+          
         </TanstackProvider>
       </body>
     </html>
   );
 }
+

@@ -16,7 +16,7 @@ const Navbar = () => {
             </div>
 
             {/* Right Section: Check Payment Status */}
-            <div>
+            <div className="ml-auto mr-20 mt-4"> 
                 <a href="#" className="text-white text-sm hover:underline">
                     Check Payment Status
                 </a>

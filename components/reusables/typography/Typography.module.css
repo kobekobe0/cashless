@@ -3,68 +3,82 @@
 
 :root {
   /* Primary Colors */
-  --primary-dark: #100389;
-  --primary-light: #FFFFFF;
-  --secondary-dark: #292D35;
+  --primaryDark: #100389;
+  --primaryLight: #FFFFFF;
+  --secondaryDark: #292D35;
+  
+  /* Additional Colors */
+  --blueDark: #1E325C;
+  --yellowAccent: #FDD116;
+  --redAccent: #FF1717;
+  --lightBlue: #C9E5EC;
+  --deepBlue: #3949AB;
 
   /* Typography Sizes */
-  --primary-label-size: 16px;
-  --secondary-content-size: 14px;
-  --primary-title-size: 32px;
-  --secondary-title-size: 28px;
-  --button-text-size: 13px;
-  --action-link-size: 16px;
-  --content-link-size: 14px;
+  --primaryLabelSize: 16px;
+  --secondaryContentSize: 14px;
+  --primaryTitleSize: 32px;
+  --secondaryTitleSize: 28px;
+  --buttonTextSize: 13px;
+  --actionLinkSize: 16px;
+  --contentLinkSize: 14px;
 }
 
 /* Text Styles */
-.primary-label {
+.primaryLabel {
   font-family: 'Poppins', sans-serif;
-  font-size: var(--primary-label-size);
+  font-size: var(--primaryLabelSize);
   font-weight: 500;
-  color: var(--secondary-dark);
+  color: var(--secondaryDark);
 }
 
-.secondary-content {
+.secondaryContent {
   font-family: 'Poppins', sans-serif;
-  font-size: var(--secondary-content-size);
+  font-size: var(--secondaryContentSize);
   font-weight: 400;
-  color: var(--secondary-dark);
+  color: var(--secondaryDark);
 }
 
-.primary-title {
+.primaryTitle {
   font-family: 'Poppins', sans-serif;
-  font-size: var(--primary-title-size);
+  font-size: var(--primaryTitleSize);
   font-weight: 700;
-  color: var(--primary-dark);
+  color: var(--primaryDark);
 }
 
-.secondary-title {
+.secondaryTitle {
   font-family: 'Poppins', sans-serif;
-  font-size: var(--secondary-title-size);
-  font-weight: 700;
-  color: var(--secondary-dark);
+  font-size: var(--secondaryTitleSize);
+  font-weight: 700 !important;
+  color: var(--secondaryDark);
 }
 
-.button-text {
+.buttonText {
   font-family: 'Poppins', sans-serif;
-  font-size: var(--button-text-size);
+  font-size: var(--buttonTextSize);
   font-weight: 500;
-  color: var(--primary-dark);
+  color: var(--primaryDark);
 }
 
-.action-link {
+.actionLink {
   font-family: 'Poppins', sans-serif;
-  font-size: var(--action-link-size);
+  font-size: var(--actionLinkSize);
   font-weight: 500;
   text-transform: uppercase;
-  color: var(--primary-dark);
+  color: var(--primaryDark);
 }
 
-.content-link {
+.contentLink {
   font-family: 'Poppins', sans-serif;
-  font-size: var(--content-link-size);
+  font-size: var(--contentLinkSize);
   font-weight: 400;
   text-decoration: underline;
-  color: var(--primary-dark);
+  color: var(--primaryDark);
 }
+
+/* Additional */
+.whiteText p,
+.whiteText h2 {
+  color: white !important;
+}
+

@@ -1,6 +1,6 @@
 "use client";
 
-import { useState, useEffect } from "react";
+import { useState, useEffect, useId } from "react";
 
 const getPositionClasses = (position) => {
     switch (position) {
@@ -24,14 +24,13 @@ const getPositionClasses = (position) => {
 const ToastContainer = ({ position = "top-right" }) => {
     const [toasts, setToasts] = useState([]);
 
-
     const showToast = (message, type, position = "top-right") => {
-        const id = crypto.randomUUID(); // Use crypto.randomUUID() for consistent IDs
-        setToasts((prev) => [...prev, { id, message, type, position }]);
-
-        setTimeout(() => {
-            setToasts((prev) => prev.filter((toast) => toast.id !== id));
-        }, 3000);
+      const id = useId(); // Ensures the ID is stable across SSR & client
+      setToasts((prev) => [...prev, { id, message, type, position }]);
+  
+      setTimeout(() => {
+          setToasts((prev) => prev.filter((toast) => toast.id !== id));
+      }, 3000);
     };
 
     useEffect(() => {

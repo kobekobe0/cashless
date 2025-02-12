@@ -1,6 +1,6 @@
 // components/Navbar.jsx
 import Image from "next/image";
-import Container from "@/components/reusables/layout/Container";
+import Container from "@/components/reusables/cardContainer/container";
 import { PrimaryLabel, SecondaryTitle, ActionLink } from "@/components/reusables/typography/Typography";
 import styles from "@/components/reusables/typography/Typography.module.css";
 

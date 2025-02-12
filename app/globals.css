@@ -29,3 +29,19 @@
     font-family: 'Poppins', sans-serif;
   }
   
+
+  /* ROBOTO Font*/
+  @font-face {
+    font-family: 'Roboto';
+    src: url('/fonts/roboto/Roboto-VariableFont_wdth,wght.ttf') format('truetype');
+    font-weight: 100 900;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Roboto';
+    src: url('/fonts/roboto/Roboto-Italic-VariableFont_wdth,wght.ttf') format('truetype');
+    font-weight: 100 900;
+    font-style: italic;
+}
+

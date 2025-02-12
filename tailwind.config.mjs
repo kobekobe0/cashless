@@ -10,6 +10,7 @@ const config = {
     extend: {
       fontFamily: {
         poppins: ["Poppins", "sans-serif"],
+        roboto: ["Roboto", "sans-serif"], // Add Roboto to the font stack
       },
       colors: {
         primaryDark: "#100389",

@@ -76,7 +76,9 @@
   color: var(--primaryDark);
 }
 
-/* Additional */
+/* Additional 
+Unable to figure out how to override in certain situations so used this for now
+May be changed*/
 .whiteText p,
 .whiteText h2 {
   color: white !important;

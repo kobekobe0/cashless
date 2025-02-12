@@ -3,6 +3,7 @@ import { useState } from "react";
 import { useRouter } from "next/navigation";
 import QRScanner from "@/components/qrscanner/QRScanner";
 import PrimaryBtn from "@/components/reusables/buttons/primary";
+import Card from "@/components/reusables/cardContainer/card";
 
 export default function LandingPage() {
   const [urn, setUrn] = useState("RD004202400000014");
@@ -17,7 +18,7 @@ export default function LandingPage() {
       <div className="flex flex-col md:flex-row gap-0 max-w-5xl w-full justify-center items-stretch relative">
         
         {/* Left Panel (LRA Info) */}
-        <div className="bg-[#0A1E72] text-white p-8 rounded-2xl w-full md:w-[450px] text-center shadow-lg flex flex-col justify-between relative z-10 -mr-6">
+        <Card className="bg-primaryDark text-white p-8 rounded-2xl w-full md:w-[450px] text-center shadow-lg flex flex-col justify-between relative z-10 -mr-6">
           <h2 className="text-primary-title whitespace-nowrap">LRA ONLINE PAYMENT</h2>
           <div className="mt-6 w-48 h-48 bg-gray-300 rounded-lg mx-auto"></div> 
           <p className="mt-6 text-primary-content">
@@ -28,7 +29,7 @@ export default function LandingPage() {
           <p className="mt-4 text-yellowGold font-semibold text-primary-content italic">
             It's fast and simple. Why wait? Pay your LRA transaction online!
           </p>
-        </div>
+        </Card>
 
         {/* Right Panel (Steps & Input) */}
         <div className="bg-white p-8 rounded-r-2xl w-full md:w-[460px] text-center shadow-lg flex flex-col justify-between relative z-0">

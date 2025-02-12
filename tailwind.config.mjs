@@ -1,6 +1,6 @@
 /** @type {import('tailwindcss').Config} */
 const config = {
-  important: true, // ✅ Ensures Tailwind utility classes always take priority
+  important: true, // Ensures Tailwind utility classes always take priority
   content: [
     "./pages/**/*.{js,ts,jsx,tsx,mdx}",
     "./components/**/*.{js,ts,jsx,tsx,mdx}",

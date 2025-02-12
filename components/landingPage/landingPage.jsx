@@ -4,6 +4,7 @@ import { useRouter } from "next/navigation";
 import QRScanner from "@/components/qrscanner/QRScanner";
 import PrimaryBtn from "@/components/reusables/buttons/primary";
 import Card from "@/components/reusables/cardContainer/card";
+import Container from "@/components/reusables/cardContainer/container";
 
 export default function LandingPage() {
   const [urn, setUrn] = useState("RD004202400000014");
@@ -12,14 +13,20 @@ export default function LandingPage() {
   const router = useRouter();
 
   return (
-    <div className="min-h-screen flex items-center justify-center bg-lightBlue p-6 font-poppins">
+    <Container className="min-h-screen flex items-center justify-center bg-lightBlue p-6 font-poppins">
       
       {/* Parent container with adjusted overlap */}
-      <div className="flex flex-col md:flex-row gap-0 max-w-5xl w-full justify-center items-stretch relative">
+      <Container className="flex flex-col md:flex-row gap-0 max-w-5xl w-full justify-center items-stretch relative">
         
         {/* Left Panel (LRA Info) */}
         <Card className="bg-primaryDark text-white p-8 rounded-2xl w-full md:w-[450px] text-center shadow-lg flex flex-col justify-between relative z-10 -mr-6">
-          <h2 className="text-primary-title whitespace-nowrap">LRA ONLINE PAYMENT</h2>
+        
+          <Card className="w-full self-stretch p-6 rounded-lg text-center shadow-lg text-white bg-[linear-gradient(to_bottom,var(--deepBlue),var(--primaryDark))]">
+            <h2 className="text-xl font-bold">LRA ONLINE PAYMENT</h2>
+          </Card>
+
+
+
           <div className="mt-6 w-48 h-48 bg-gray-300 rounded-lg mx-auto"></div> 
           <p className="mt-6 text-primary-content">
             Pay your LRA transaction fees securely. For a <br />
@@ -32,9 +39,9 @@ export default function LandingPage() {
         </Card>
 
         {/* Right Panel (Steps & Input) */}
-        <div className="bg-white p-8 rounded-r-2xl w-full md:w-[460px] text-center shadow-lg flex flex-col justify-between relative z-0">
+        <Card className="bg-white p-8 rounded-r-2xl w-full md:w-[460px] text-center shadow-lg flex flex-col justify-between relative z-0">
           
-          <div>
+          <Card>
             <h2 className="text-secondary-title text-secondary">Step 1:</h2>
             <p className="text-secondary-content mt-1">
               Get your Assessment Form and Payment Order (AFPO).
@@ -53,7 +60,7 @@ export default function LandingPage() {
                 <img src="/icons/LARLogo.SVG" alt="Open QR Scanner" className="w-12 h-12" />
               </button>
             ) : (
-              <div className="mt-4">
+              <Card className="mt-4">
                 <QRScanner 
                   onScan={(data) => { 
                     setScannedData(data);
@@ -61,7 +68,7 @@ export default function LandingPage() {
                   }} 
                   closeScanner={() => setShowScanner(false)} 
                 />
-              </div>
+              </Card>
             )}
 
             {scannedData && (
@@ -74,22 +81,22 @@ export default function LandingPage() {
               Or input the Unique Reference Number (URN) located in the footer of the first page of AFPO in case the QR Code cannot be read.
             </p>
             
-            <div className="flex justify-center items-center mt-4 border border-secondary rounded-md px-4 py-2 w-72 mx-auto">
+            <Card className="flex justify-center items-center mt-4 border border-secondary rounded-md px-4 py-2 w-72 mx-auto">
               <input
                 type="text"
                 value={scannedData || urn}
                 readOnly
                 className="text-center w-full bg-transparent outline-none text-primary-content"
               />
-            </div>
-          </div>
+            </Card>
+          </Card>
 
-          <div className="mt-6 flex justify-center">
+          <Card className="mt-6 flex justify-center">
             <PrimaryBtn text="PROCEED" onClick={() => console.log("Proceed clicked")} />
-          </div>
+          </Card>
 
-        </div>
-      </div>
-    </div>
+        </Card>
+      </Container>
+    </Container>
   );
 }

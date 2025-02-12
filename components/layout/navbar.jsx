@@ -1,8 +1,6 @@
-// components/Navbar.jsx
 import Image from "next/image";
 import Container from "@/components/reusables/cardContainer/container";
 import { PrimaryLabel, SecondaryTitle, ActionLink } from "@/components/reusables/typography/Typography";
-import styles from "@/components/reusables/typography/Typography.module.css";
 
 const Navbar = () => {
     return (
@@ -11,11 +9,11 @@ const Navbar = () => {
             <Container className="flex items-center gap-4">
                 <Image src="/icons/LARLogo.SVG" alt="LRA Logo" width={60} height={60} />
                 
-                <Container className={styles.whiteText}>
-                    <PrimaryLabel>Republic of the Philippines</PrimaryLabel>
+                <Container className="!text-white">
+                    <PrimaryLabel className="!text-white">Republic of the Philippines</PrimaryLabel>
                     <hr className="border-t border-white my-1 w-full" />
-                    <PrimaryLabel>Department of Justice</PrimaryLabel>
-                    <SecondaryTitle className="font-bold">LAND REGISTRATION AUTHORITY</SecondaryTitle>
+                    <PrimaryLabel className="!text-white">Department of Justice</PrimaryLabel>
+                    <SecondaryTitle className="!text-white font-bold">LAND REGISTRATION AUTHORITY</SecondaryTitle>
                 </Container>
 
                 <Image src="/icons/digital-philippines.png" alt="Digital Philippines Logo" width={60} height={60} />
@@ -30,4 +28,3 @@ const Navbar = () => {
 };
 
 export default Navbar;
-

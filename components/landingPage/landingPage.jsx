@@ -33,7 +33,7 @@ export default function LandingPage() {
             smooth payment experience, use your preferred <br />
             e-wallets, debit cards, or credit cards.
           </p>
-          <p className="mt-4 text-yellowGold font-semibold text-primary-content italic">
+          <p className="mt-4 text-yellowAccent font-semibold text-primary-content italic">
             It's fast and simple. Why wait? Pay your LRA transaction online!
           </p>
         </Card>
@@ -42,12 +42,12 @@ export default function LandingPage() {
         <Card className="bg-white p-8 rounded-r-2xl w-full md:w-[460px] text-center shadow-lg flex flex-col justify-between relative z-0">
           
           <Card>
-            <h2 className="text-secondary-title text-secondary">Step 1:</h2>
+            <h2 className="text-secondary-title text-secondary font-bold">Step 1:</h2>
             <p className="text-secondary-content mt-1">
               Get your Assessment Form and Payment Order (AFPO).
             </p>
 
-            <h2 className="text-secondary-title text-secondary mt-6">Step 2:</h2>
+            <h2 className="text-secondary-title text-secondary mt-6 font-bold">Step 2:</h2>
             <p className="text-secondary-content mt-1">
               Locate and scan the QR Code found in the footer section of the first page within the AFPO.
             </p>

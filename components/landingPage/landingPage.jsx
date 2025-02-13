@@ -93,7 +93,7 @@ export default function LandingPage() {
           </Card>
 
           <Card className="mt-6 flex justify-center">
-            <PrimaryBtn text="PROCEED" onClick={() => console.log("Proceed clicked")} />
+          <PrimaryBtn text="PROCEED" onClick={() => console.log("Proceed clicked")} />
           </Card>
 
         </Card>

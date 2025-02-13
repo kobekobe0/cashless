@@ -23,9 +23,10 @@ export default function LandingPage() {
             <h2 className="text-xl font-bold">LRA ONLINE PAYMENT</h2>
           </Card>
           
-          <Container className="mt-6 w-48 h-48 rounded-lg mx-auto flex items-center justify-center overflow-hidden">
-            <Image src="/icons/ePayIconNoBg.SVG" alt="EPay Icon" layout="intrinsic" width={250} height={250} objectFit="contain" priority className="max-w-full max-h-full" />
+          <Container className="mt-6 w-[350px] h-[300px] rounded-lg mx-auto flex items-center justify-center overflow-hidden">
+            <Image src="/icons/ePayIconNoBg.SVG" alt="EPay Icon" layout="intrinsic" width={300} height={300} objectFit="cover" priority className="w-full h-full" />
           </Container>
+
 
 
           <p className="mt-6 text-primary-content">

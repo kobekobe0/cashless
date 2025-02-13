@@ -14,22 +14,18 @@ export default function LandingPage() {
   const router = useRouter();
 
   return (
-    <Container className="min-h-screen grid place-items-center bg-lightBlue p-6 font-poppins">
+    <Container variant="outerContainer">
       <Container className="grid grid-cols-1 md:grid-cols-2 max-w-5xl w-full relative">
         
         {/* Left Panel (LRA Info) with dark background */}
-        <Card
-          disableDefaultStyles
-          className="p-8 rounded-2xl w-full flex flex-col justify-between relative z-10 -mr-6 bg-primaryDark text-white text-center"
-        >
-          <Card
-            disableDefaultStyles
-            className="w-full self-stretch p-6 rounded-lg shadow-lg bg-gradient-to-b from-deepBlue to-primaryDark text-white text-center"
-          >
+        <Card  className="p-8 rounded-2xl w-full flex flex-col justify-between relative z-10 bg-primaryDark text-white text-center">
+          <Card  className="w-[calc(100%+4rem)] -ml-8 -mr-8 p-6 rounded-lg shadow-lg bg-gradient-to-b from-deepBlue to-primaryDark text-white text-center">
             <h2 className="text-xl font-bold">LRA ONLINE PAYMENT</h2>
           </Card>
 
+          insert svg here
           <div className="mt-6 w-48 h-48 bg-gray-300 rounded-lg mx-auto"></div>
+
           <p className="mt-6 text-primary-content">
             Pay your LRA transaction fees securely. For a <br />
             smooth payment experience, use your preferred <br />

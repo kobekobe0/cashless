@@ -15,11 +15,10 @@ const Navbar = () => {
                     <PrimaryLabel className="!text-white">Department of Justice</PrimaryLabel>
                     <SecondaryTitle className="!text-white font-bold">LAND REGISTRATION AUTHORITY</SecondaryTitle>
                 </Container>
-
                 <Image src="/icons/bagongPilipinasLogo.SVG" alt="Digital Philippines Logo" width={60} height={60} />
             </Container>
 
-            {/* Check Payment Status Button */}
+            {/* Check Payment Status Button PLACEHOLDER FOR NOW*/}
             <Container className="ml-auto">
                 <ActionLink className="text-actionLink">Check Payment Status</ActionLink>
             </Container>

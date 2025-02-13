@@ -22,9 +22,11 @@ export default function LandingPage() {
           <Card  className="w-[calc(100%+4rem)] -ml-8 -mr-8 p-6 rounded-lg shadow-lg bg-gradient-to-b from-deepBlue to-primaryDark text-white text-center">
             <h2 className="text-xl font-bold">LRA ONLINE PAYMENT</h2>
           </Card>
+          
+          <Container className="mt-6 w-48 h-48 rounded-lg mx-auto flex items-center justify-center overflow-hidden">
+            <Image src="/icons/ePayIconNoBg.SVG" alt="EPay Icon" layout="intrinsic" width={250} height={250} objectFit="contain" priority className="max-w-full max-h-full" />
+          </Container>
 
-          insert svg here
-          <div className="mt-6 w-48 h-48 bg-gray-300 rounded-lg mx-auto"></div>
 
           <p className="mt-6 text-primary-content">
             Pay your LRA transaction fees securely. For a <br />

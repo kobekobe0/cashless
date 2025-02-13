@@ -10,11 +10,11 @@ export default function RootLayout({ children }) {
     <html>
       <body className="pt-[80px]">  {/* Adjust the padding to navbar height */}
         <TanstackProvider>
-          <ToastContainer position="bottom-right"/>
+          <ToastContainer position="bottom-right">
           
           <Navbar />
           {children}
-          
+          </ToastContainer>
         </TanstackProvider>
       </body>
     </html>

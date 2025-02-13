@@ -118,36 +118,37 @@ const Reusables = () => {
 
             <PrimaryLabel className="text-gray-600 text-sm mb-4">How to use:</PrimaryLabel>
             <ul className="text-gray-700 text-sm mb-6 text-left">
-                <li><span className="font-semibold">ToastContainer</span> - Handles displaying toast notifications.</li>
-                <li><span className="font-semibold">toast.success(message)</span> - Displays a success toast.</li>
-                <li><span className="font-semibold">toast.error(message)</span> - Displays an error toast.</li>
+                <li><span className="font-semibold">ToastContainer</span> - Wraps your app to enable toast notifications.</li>
+                <li><span className="font-semibold">useToast()</span> - A hook to trigger success and error toasts.</li>
             </ul>
 
             <pre className="text-xs bg-gray-100 p-4 rounded-md text-left w-full max-w-xl overflow-x-auto">
-                {`// 1. Add ToastContainer at the root level
+                {`// 1. Wrap your app with ToastContainer
                 import { ToastContainer } from "@/components/reusables/validation/toast";
 
                 function App() {
                 return (
-                    <>
-                    <ToastContainer position="top-right" />
+                    <ToastContainer position="top-right">
                     {/* Other components */}
-                    </>
+                    </ToastContainer>
                 );
-                }`}</pre>
+                }`}
+            </pre>
 
-                    <pre className="text-xs bg-gray-100 p-4 rounded-md text-left w-full max-w-xl overflow-x-auto mt-4">
-                {`// 2. Trigger toasts using the global toast object
-                import { toast } from "@/components/reusables/validation/toast";
+            <pre className="text-xs bg-gray-100 p-4 rounded-md text-left w-full max-w-xl overflow-x-auto mt-4">
+                {`// 2. Use the useToast hook in your components
+                import { useToast } from "@/components/reusables/validation/toast";
 
                 function MyComponent() {
+                const showToast = useToast(); // Get toast function
+
                 return (
                     <>
-                    <button onClick={() => toast.success("Success!")}>
+                    <button onClick={() => showToast("Success!", "success")}>
                         Show Success
                     </button>
 
-                    <button onClick={() => toast.error("Something went wrong!")}>
+                    <button onClick={() => showToast("Something went wrong!", "error")}>
                         Show Error
                     </button>
                     </>

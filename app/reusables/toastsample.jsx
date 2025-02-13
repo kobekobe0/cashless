@@ -1,21 +1,22 @@
 "use client";
 
-import { ToastContainer, toast } from "@/components/reusables/validation/toast";
+import { ToastContainer, useToast } from "@/components/reusables/validation/toast";
 
 const ToastSample = () => {
+  const toast = useToast();
   return (
     <>
 
 
       <div className="flex gap-4">
         <button
-          onClick={() => toast.success("Success!")}
+          onClick={() =>  toast("Hello!", "success")}
           className="px-4 py-2 bg-green-600 text-white rounded-md"
         >
           Show Success
         </button>
         <button
-          onClick={() => toast.error("Something went wrong!")}
+          onClick={() => toast("Hello!", "error")}
           className="px-4 py-2 bg-red-600 text-white rounded-md"
         >
           Show Error

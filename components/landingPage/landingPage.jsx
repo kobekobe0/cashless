@@ -1,6 +1,7 @@
 "use client";
 import { useState } from "react";
 import { useRouter } from "next/navigation";
+import Image from "next/image";
 import QRScanner from "@/components/qrscanner/QRScanner";
 import PrimaryBtn from "@/components/reusables/buttons/primary";
 import Card from "@/components/reusables/cardContainer/card";
@@ -57,7 +58,7 @@ export default function LandingPage() {
                 onClick={() => setShowScanner(true)}
                 className="mt-4 flex items-center justify-center w-20 h-20 bg-gray-200 rounded-full hover:bg-gray-300 transition mx-auto"
               >
-                <img src="/icons/LARLogo.SVG" alt="Open QR Scanner" className="w-12 h-12" />
+                <Image src="/icons/qrCodeScanner.SVG" alt="QR Code Scanner" width={60} height={60} className="w-12 h-12" />
               </button>
             ) : (
               <Card className="mt-4">

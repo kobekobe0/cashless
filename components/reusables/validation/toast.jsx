@@ -1,6 +1,6 @@
 "use client";
 
-import { useState, useEffect, useId } from "react";
+import { useState, useEffect, useId, useRef } from "react";
 
 const getPositionClasses = (position) => {
     switch (position) {
@@ -23,20 +23,19 @@ const getPositionClasses = (position) => {
 
 const ToastContainer = ({ position = "top-right" }) => {
     const [toasts, setToasts] = useState([]);
-
+    const toastIdCounter = useRef(0); // Client-side ID counter
+    
     const showToast = (message, type, position = "top-right") => {
-      const id = useId(); // Ensures the ID is stable across SSR & client
+      const id = toastIdCounter.current++; // Client-side only ID
       setToasts((prev) => [...prev, { id, message, type, position }]);
-  
+    
       setTimeout(() => {
-          setToasts((prev) => prev.filter((toast) => toast.id !== id));
+        setToasts((prev) => prev.filter((toast) => toast.id !== id));
       }, 3000);
     };
-
+    
     useEffect(() => {
-        if (typeof window !== "undefined") {
-            window.showToast = showToast;
-        }
+      window.showToast = showToast;
     }, []);
     return (
         <div className={`fixed flex flex-col gap-2 ${getPositionClasses(position)}`}>
@@ -44,7 +43,7 @@ const ToastContainer = ({ position = "top-right" }) => {
                 <div
                     key={toast.id}
                     className={`px-4 py-2 min-w-[250px] rounded-md shadow-lg text-white text-start w-fit text-sm transition-all duration-300 pointer-events-auto ${
-                        toast.type === "success" ? "bg-royalBlue" : "bg-lightRed"
+                        toast.type === "success" ? "bg-deepBlue" : "bg-redAccent"
                     }`}
                 >
                 {toast.message}

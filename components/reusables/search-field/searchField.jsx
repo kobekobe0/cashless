@@ -12,7 +12,7 @@ const SearchField = ({ placeholder = "Search...", value, onChange, onSearch }) =
       />
       <button
         onClick={onSearch}
-        className="bg-royalBlue p-3 flex items-center justify-center"
+        className="bg-deepBlue p-3 flex items-center justify-center"
       >
         <svg
           xmlns="http://www.w3.org/2000/svg"

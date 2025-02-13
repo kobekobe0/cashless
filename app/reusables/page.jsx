@@ -24,8 +24,8 @@ const Reusables = () => {
                         colors: {
                             primary: "#100389",
                             secondary: "#292D35",
-                            darkBlue: "#1E325C",
-                            royalBlue: "#3949AB",
+                            blueDark: "#1E325C",
+                            deepBlue: "#3949AB",
                             lightBlue: "#C9E5EC",
                             yellowGold: "#FDD116",
                             lightRed: "#FF1717",

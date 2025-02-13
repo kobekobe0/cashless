@@ -11,7 +11,7 @@ const Navbar = () => {
                 
                 <Container className="!text-white">
                     <PrimaryLabel className="!text-white">Republic of the Philippines</PrimaryLabel>
-                    <hr className="border-t border-white my-1 w-full" />
+                    <hr className="border-t border-yellowAccent my-1 w-full" />
                     <PrimaryLabel className="!text-white">Department of Justice</PrimaryLabel>
                     <SecondaryTitle className="!text-white font-bold">LAND REGISTRATION AUTHORITY</SecondaryTitle>
                 </Container>

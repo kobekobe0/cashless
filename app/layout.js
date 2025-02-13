@@ -1,7 +1,7 @@
 import { TanstackProvider } from "@/components/providers/tanstack-provider";
 import Image from "next/image";
 import "./globals.css";
-import Navbar from "@/components/layout/navbar";
+import Navbar from "@/components/layout/navBar";
 import { ToastContainer } from "@/components/reusables/validation/toast";
 
 

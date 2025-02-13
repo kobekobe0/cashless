@@ -94,7 +94,7 @@ const PaymentSummary = () => {
 
     return (
         <PaddedContainer className="mt-8">
-            <PrimaryLabel className='mt-24 text-3xl'>Payment Summary Page</PrimaryLabel>
+            <PrimaryLabel className='mt-24 text-2xl'>Payment Summary Page</PrimaryLabel>
             <Container className="grid-cols-7 grid mt-12" >
                 <Container className="xl:col-span-2 col-span-7 space-y-4 mx-2">
                     <RequestDetails request={sample.reqDetail} />
@@ -123,8 +123,8 @@ const PaymentSummary = () => {
                             ))}
                         </Container>
                         <Container className="flex gap-4 justify-center mt-16 mb-4">
-                            <SecondaryBtn>Cancel</SecondaryBtn>
-                            <PrimaryBtn>Proceed</PrimaryBtn>
+                            <SecondaryBtn text="Cancel"/>
+                            <PrimaryBtn text="Proceed"/>
                         </Container>
                     </Container>
                 </Card>

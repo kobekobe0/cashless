@@ -38,7 +38,7 @@ export default function LandingPage() {
 
         {/* Right Panel (Steps & Input) remains white */}
         <Card className="rounded-r-2xl w-full flex flex-col justify-between relative z-0">
-          <Card>
+          <Card className="shadow-none">
             <h2 className="text-secondary-title text-secondary font-bold">
               Step 1:
             </h2>
@@ -90,7 +90,7 @@ export default function LandingPage() {
               the first page of AFPO in case the QR Code cannot be read.
             </p>
 
-            <Card className="flex justify-center items-center mt-4 border border-secondary rounded-md px-4 py-2 w-72 mx-auto">
+            <Card className="flex justify-center items-center mt-4 border border-secondary rounded-md px-4 py-2 w-72 mx-auto shadow-none">
               <input
                 type="text"
                 value={scannedData || urn}
@@ -100,7 +100,7 @@ export default function LandingPage() {
             </Card>
           </Card>
 
-          <Card className="mt-6 flex justify-center">
+          <Card className="mt-6 flex justify-center shadow-none">
             <PrimaryBtn
               text="PROCEED"
               onClick={() => console.log("Proceed clicked")}

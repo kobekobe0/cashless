@@ -5,16 +5,12 @@ import { PrimaryLabel, SecondaryTitle, ActionLink } from "@/components/reusables
 import navbarConfig from "@/config/navbar/navbarConfig";
 
 const Navbar = () => {
-    
-console.log("Navbar Config:", navbarConfig);
-
- 
     return (
         <Container className="bg-primaryDark text-white w-full py-4 fixed top-0 left-0 grid grid-cols-[auto_1fr_auto] items-center px-10 z-50">
             {/* Left Section: Logos and Text */}
             <Container className="grid grid-cols-[auto_auto_auto] items-center gap-4">
                 {/* Left Logo */}
-                <Container className={navbarConfig.containerIcon.className}>
+                <Container className="w-[80px] h-[80px] flex items-center justify-center overflow-hidden relative">
                     <Image 
                         src={navbarConfig.logos.left.src} 
                         alt={navbarConfig.logos.left.alt}
@@ -34,7 +30,7 @@ console.log("Navbar Config:", navbarConfig);
                 </Container>
 
                 {/* Right Logo */}
-                <Container className={navbarConfig.containerIcon.className}>
+                <Container className="w-[80px] h-[80px] flex items-center justify-center overflow-hidden relative">
                     <Image 
                         src={navbarConfig.logos.right.src} 
                         alt={navbarConfig.logos.right.alt}

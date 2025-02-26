@@ -6,6 +6,8 @@ import QRScanner from "@/components/qrscanner/QRScanner";
 import PrimaryBtn from "@/components/reusables/buttons/primary";
 import Card from "@/components/reusables/cardContainer/card";
 import Container from "@/components/reusables/cardContainer/container";
+import landingPageConfig from "@/config/landingPage/landingPageConfig";
+import imageLoader from "@/lib/imageLoader"; // Adjust path if needed
 
 export default function LandingPage() {
   const [urn, setUrn] = useState("RD004202400000014");
@@ -18,16 +20,21 @@ export default function LandingPage() {
       <Container className="grid grid-cols-1 md:grid-cols-2 max-w-5xl w-full relative">
         
         {/* Left Panel (LRA Info) with dark background */}
-        <Card  className="p-8 rounded-2xl w-full flex flex-col justify-between relative z-10 bg-primaryDark text-white text-center">
-          <Card  className="w-[calc(100%+4rem)] -ml-8 -mr-8 p-6 rounded-lg shadow-lg bg-gradient-to-b from-deepBlue to-primaryDark text-white text-center">
+        <Card className="p-8 rounded-2xl w-full flex flex-col justify-between relative z-10 bg-primaryDark text-white text-center">
+          <Card className="w-[calc(100%+4rem)] -ml-8 -mr-8 p-6 rounded-lg shadow-lg bg-gradient-to-b from-deepBlue to-primaryDark text-white text-center">
             <h2 className="text-xl font-bold">LRA ONLINE PAYMENT</h2>
           </Card>
           
-          <Container className="mt-6 w-[350px] h-[300px] rounded-lg mx-auto flex items-center justify-center overflow-hidden">
-            <Image src="/icons/ePayIconNoBg.SVG" alt="EPay Icon" layout="intrinsic" width={300} height={300} objectFit="cover" priority className="w-full h-full" />
+          <Container className={landingPageConfig.logos.container.className}>
+          <Image 
+            src={landingPageConfig.logos.left.src} 
+            alt={landingPageConfig.logos.left.alt} 
+            loader={imageLoader} 
+            unoptimized 
+            fill
+          />
+
           </Container>
-
-
 
           <p className="mt-6 text-primary-content">
             Pay your LRA transaction fees securely. For a <br />

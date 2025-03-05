@@ -1,3 +1,4 @@
+//global.api.js
 import axios from "axios";
 import { API_HOST } from ".";
 

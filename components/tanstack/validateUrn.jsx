@@ -1,13 +1,10 @@
+//validateUrn.jsx
 "use client";
 
-import { useMutation } from "@tanstack/react-query";
-import { getUrnDetails } from "@/store/urn/urn.repository";
+import { useGetUrnDetails } from "@/store/urn/urn.repository";
 
 export default function ValidateUrn({ urn }) {
-  // UseMutation with a function that takes an argument
-  const mutation = useMutation({
-    mutationFn: (urn) => getUrnDetails(urn),
-  });
+  const mutation = useGetUrnDetails(); // Use the custom hook
 
   return (
     <div className="p-3 bg-gray-100 rounded-lg mt-4">
@@ -22,14 +19,16 @@ export default function ValidateUrn({ urn }) {
       {mutation.isLoading && <p>Loading...</p>}
       {mutation.error && <p className="text-red-600 font-semibold">Error: {mutation.error.message}</p>}
 
-      {mutation.data?.success ? (
-        <>
-          <p className="text-green-600 font-semibold">✅ {mutation.data.message}</p>
-          <p>System ID: {mutation.data.data.systemID}</p>
-        </>
-      ) : (
-        mutation.data && <p className="text-red-600 font-semibold">❌ Invalid URN</p>
-      )}
+      {mutation.data ? (
+        mutation.data.success ? (
+          <>
+            <p className="text-green-600 font-semibold">✅ {mutation.data.message}</p>
+            <p>System ID: {mutation.data.data.systemID}</p>
+          </>
+        ) : (
+          <p className="text-red-600 font-semibold">❌ Invalid URN</p>
+        )
+      ) : null}
     </div>
   );
 }

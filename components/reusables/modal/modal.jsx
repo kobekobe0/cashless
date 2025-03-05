@@ -1,24 +1,37 @@
 "use client";
 
-const Modal = ({ isOpen, onClose, title, children, footer }) => {
-  if (!isOpen) return null;
+import { motion, AnimatePresence } from "framer-motion";
+import PrimaryBtn from "@/components/reusables/buttons/primary";
 
+const Modal = ({ isOpen, onClose, title, children }) => {
   return (
-    <div className="fixed inset-0 bg-black bg-opacity-50 flex justify-center items-center z-50">
-      <div className="bg-white rounded-lg shadow-lg w-full max-w-lg">
+    <AnimatePresence>
+      {isOpen && (
+        <motion.div
+          className="fixed inset-0 w-full h-full flex items-center justify-center bg-black bg-opacity-50 z-[99999]"
+          initial={{ opacity: 0 }}
+          animate={{ opacity: 1 }}
+          exit={{ opacity: 0 }}
+        >
+          <motion.div
+            className="bg-white p-6 rounded-lg text-center shadow-lg w-[90%] max-w-md relative"
+            initial={{ opacity: 0, scale: 0.8 }}
+            animate={{ opacity: 1, scale: 1 }}
+            exit={{ opacity: 0, scale: 0.8 }}
+            transition={{ duration: 0.3, ease: "easeOut" }}
+          >
+            <div className="bg-deepBlue p-4 rounded-t-lg shadow-lg w-full absolute top-0 left-0 flex justify-between items-center">
+              <p className="text-white text-left pl-6 font-bold">{title}</p>
+              <button onClick={onClose} className="text-gray-300 text-xl hover:text-gray-700">
+                &times;
+              </button>
+            </div>
 
-        <div className="flex justify-between items-center bg-deepBlue rounded-tr-lg rounded-tl-lg text-white p-4 border-b">
-          <h2 className="text-xl font-semibold ">{title}</h2>
-          <button onClick={onClose} className="text-gray-300 text-xl hover:text-gray-700">
-            &times;
-          </button>
-        </div>
-
-        <div className="p-4">{children}</div>
-
-        {footer && <div className="p-4 border-t flex justify-center gap-2">{footer}</div>}
-      </div>
-    </div>
+            <div className="text-secondaryDark mb-4 pt-[50px]">{children}</div>
+          </motion.div>
+        </motion.div>
+      )}
+    </AnimatePresence>
   );
 };
 
